@@ -83,6 +83,7 @@ public class MedicoEspecialidadTest {
         medicoEspecialidadService.addEspecialidad(medico.getId(), especialidad.getId());
     
         // Verificación se omite ya que no tienes el método get. La ausencia de excepciones indica éxito.
+        assertEquals(medico.getEspecialidad().get(0),especialidad);
     }
 
     @Test
