@@ -22,7 +22,7 @@ public class EspecialidadService {
     public EspecialidadEntity createEspecialidad (EspecialidadEntity especialidadEntity)
             throws EntityNotFoundException, IllegalOperationException {
         log.info("Inicia proceso de creación de la especialidad");
-        if (especialidadEntity.getDescripcion().length() > 10)
+        if (especialidadEntity.getDescripcion().length() < 10)
             throw new IllegalOperationException("descripción no es válida");  
         return especialidadRepository.save(especialidadEntity);
     }

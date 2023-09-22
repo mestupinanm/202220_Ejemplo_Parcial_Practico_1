@@ -30,7 +30,6 @@ public class EspecialidadServiceTest {
     @Autowired
     private EspecialidadService especialidadService;
     
-
     @Autowired
     private TestEntityManager entityManager;
     private PodamFactory factory = new PodamFactoryImpl();
